@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TADEX FAKE REACTIONS</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #000;
+        color: #00ff7f;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    header {
+        padding: 20px;
+        background: #003300;
+        border-bottom: 2px solid #00ff7f;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #00ff7f;
+    }
+
+    .container {
+        margin: 30px auto;
+        max-width: 450px;
+        background: #001a00;
+        padding: 25px;
+        border-radius: 12px;
+        border: 2px solid #00ff7f;
+    }
+
+    input {
+        width: 90%;
+        padding: 12px;
+        margin-top: 10px;
+        border: 1px solid #00ff7f;
+        background: black;
+        color: #00ff7f;
+        border-radius: 8px;
+    }
+
+    button {
+        width: 95%;
+        padding: 12px;
+        margin-top: 15px;
+        background: #00ff7f;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .result-box {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #00ff7f;
+        border-radius: 10px;
+        display: none;
+        background: #000;
+    }
+
+    .links {
+        margin-top: 25px;
+    }
+
+    .links a {
+        display: block;
+        margin: 8px 0;
+        color: #00ff7f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>TADEX FAKE REACTIONS</h1>
+</header>
+
+<div class="container">
+    <h2 style="color:#00ff7f;">Reaction Generator</h2>
+
+    <input type="text" id="channelLink" placeholder="Enter WhatsApp Channel Link">
+    <input type="number" id="reactionCount" placeholder="Number of Reactions">
+
+    <button onclick="generate()">Generate Fake Reactions</button>
+
+    <div id="result" class="result-box"></div>
+
+    <div class="links">
+        <a href="https://whatsapp.com/channel/0029Vb7dEPw0VycE9JsQSA3S" target="_blank">Join WhatsApp Channel</a>
+        <a href="https://chat.whatsapp.com/HIaePOxCIRU4JCeVUxY7d6?mode=hqrc" target="_blank">Join WhatsApp Group</a>
+        <a href="T" target="_blank"></a>
+    </div>
+</div>
+
+<script>
+function generate() {
+    let link = document.getElementById("channelLink").value;
+    let count = document.getElementById("reactionCount").value;
+    let resultBox = document.getElementById("result");
+
+    if (link.trim() === "" || count.trim() === "" || count <= 0) {
+        resultBox.style.display = "block";
+        resultBox.innerHTML = "<b>Please enter a valid channel link and number.</b>";
+        return;
+    }
+
+    resultBox.style.display = "block";
+    resultBox.innerHTML = `
+        <h3>✔ Fake Reactions Generated</h3>
+        <p><b>Channel:</b> ${link}</p>
+        <p><b>Total Reactions:</b> ${count}</p>
+        <p style="color:#00ff7f;">(This is only a visual display — nothing is sent to WhatsApp)</p>
+    `;
+}
+</script>
+
+</body>
+</html>
